@@ -1,0 +1,11 @@
+#createSanta textarea{
+  width: 100%;
+  height: 300px;
+}
+
+.santa{
+  display:block;
+  padding:8px;
+  margin:8px;
+  border:1px solid black;
+}
