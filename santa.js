@@ -31,6 +31,7 @@ function generateSantas(){
 
 function displaySantas(santas, receiver){
   html = "";
+  $('#createSanta').hide();
   for(i = 0; i<santas.length; i++){
     html += "<div class='santa' onclick='showReceiver(\""+santas[i]+"\",\""+receiver[i]+"\")'>"+santas[i]+"</div>"
   }
