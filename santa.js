@@ -32,12 +32,12 @@ function generateSantas(){
 function displaySantas(santas, receiver){
   html = "";
   for(i = 0; i<santas.length; i++){
-    html += "<div class='santa' onclick='showReceiver(\""+receiver[i]+"\")'>"+santas[i]+"</div>"
+    html += "<div class='santa' onclick='showReceiver(\""+santas[i]+"\",\""+receiver[i]+"\")'>"+santas[i]+"</div>"
   }
   $('#showSanta').html(html);
 }
 
 
-function showReceiver(r){
-  alert("Vous devez offrir un cadeau à " + r);
+function showReceiver(s,r){
+  alert(s + " tu dois offrir un cadeau à " + r);
 }
