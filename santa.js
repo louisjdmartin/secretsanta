@@ -40,7 +40,7 @@ function displaySantas(santas, receiver){
     santa = a[0]
     santaMail = a[1]
     receiverName=b[0]
-    html += "<a class='santa' href='mailto:"+santaMail+"?subject=Le père Noel Secret!&body=Bonjour "+santa+". Pour noel tu devras offrir un cadeau à "+receiverName+"'>"+santas[i]+"</a>"
+    html += "<a class='santa' href='mailto:"+santaMail+"?subject=Le père Noel Secret!&body=Bonjour "+santa+". Pour Noël tu devras offrir un cadeau à "+receiverName+".'>"+santas[i]+"</a>"
   }
   $('#showSanta').html(html);
 }
