@@ -6,14 +6,16 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="santa.js"></script>
+    <meta charset="UTF-8">
   </head>
 
   <body>
 
     <div id="createSanta">
-      <form action="#" onsubmit="generateSantas();return false">
+      <form action="#" onsubmit="generateSantas();return false" id="santaForm">
         <textarea name="name" id="listOfSantas"></textarea>
-        <input type="submit" value="generer" />
+        <button onclick="addSanta();return false">Ajouter un père Noel</button>
+        <input type="submit" value="Générer les pères Noel secrets" id="send" />
       </form>
     </div>
 

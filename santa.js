@@ -20,6 +20,8 @@ function checkNoConflict(l1, l2){
 function generateSantas(){
   var santas = $('#listOfSantas').val().split("\n");
   var receiver = $('#listOfSantas').val().split("\n");
+  santas.pop()
+  receiver.pop();
 
   while(checkNoConflict(santas,receiver) == false){
     shuffle(receiver)
@@ -33,7 +35,12 @@ function displaySantas(santas, receiver){
   html = "";
   $('#createSanta').hide();
   for(i = 0; i<santas.length; i++){
-    html += "<div class='santa' onclick='showReceiver(\""+santas[i]+"\",\""+receiver[i]+"\")'>"+santas[i]+"</div>"
+    a = santas[i].split(" ")
+    b = receiver[i].split(" ")
+    santa = a[0]
+    santaMail = a[1]
+    receiverName=b[0]
+    html += "<a class='santa' href='mailto:"+santaMail+"?subject=Le père Noel Secret!&body=Bonjour "+santa+". Pour noel tu devras offrir un cadeau à "+receiverName+"'>"+santas[i]+"</a>"
   }
   $('#showSanta').html(html);
 }
@@ -41,4 +48,12 @@ function displaySantas(santas, receiver){
 
 function showReceiver(s,r){
   alert(s + " tu dois offrir un cadeau à " + r);
+}
+
+function addSanta(){
+  santa = prompt("Nom du père Noel")
+  mail  = prompt("Email du père Noel")
+  $('#listOfSantas').append(santa + " " + mail + "\n")
+  $('#santaForm').append("<br />" + santa + " " + mail)
+  if($('#listOfSantas').val().split("\n").length>2)$('#send').show()
 }
