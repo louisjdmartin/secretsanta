@@ -13,7 +13,6 @@ function checkNoConflict(l1, l2){
       return false;
     }
   }
-
   return true;
 }
 
