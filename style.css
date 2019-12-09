@@ -5,9 +5,12 @@
 #listOfSantas,#send{
   display:none;
 }
-.santa{
+.santa, #readme{
   display:block;
   padding:8px;
   margin:8px;
   border:1px solid black;
+}
+#readme{
+  text-align: justify;
 }
