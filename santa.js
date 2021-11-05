@@ -27,8 +27,10 @@ function generateSantas(){
 
   // Check if nobody send gift to himself
   // TODO: prevent infinite loop
-  while(checkNoConflict(santas,receiver) == false){
+  conflicts = 0
+  while(checkNoConflict(santas,receiver) == false && conflicts<100){
     shuffle(receiver)
+    conflicts = conflicts + 1
   }
 
   displaySantas(santas,receiver);
