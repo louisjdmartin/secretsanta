@@ -32,6 +32,9 @@ function generateSantas(){
     shuffle(receiver)
     conflicts = conflicts + 1
   }
+  if(conflicts == 100){
+    alert("Impossible de trouver une solution où personne ne se fait de cadeau à lui même. Vérifiez la liste des participants.");
+  }
 
   displaySantas(santas,receiver);
   return receiver
